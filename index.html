@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Semih Ataman">
+  <title>Color Game</title>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <style>
+    body {
+      text-align: center;
+      background-color: #011F3F;
+    }
+
+    h1 {
+      font-family: 'Press Start 2P', cursive;
+      color: #FEF2BF;
+    }
+
+    h2 {
+      font-size: 7rem;
+      position: relative;
+      bottom: 62px;
+    }
+
+    #level-title {
+      position: relative;
+      top: 3rem;
+      font-size: 3rem;
+      margin: 10%;
+    }
+
+    .container {
+      display: block;
+      width: 50%;
+      margin: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      border: 10px solid black;
+    }
+
+    .topOfGrid {
+      margin-top: 95px;
+      padding-bottom: 25px;
+    }
+
+    .topOfGrid h1 {
+      display: inline-block;
+      font-size: 2rem;
+    }
+
+    .endOfTheGame h1 {
+      font-size: 3rem;
+      margin-bottom: 5rem;
+    }
+
+    .endOfTheGame {
+      position: relative;
+      top: 15rem;
+    }
+
+    .timer {
+      top: 1px !important;
+      font-size: 4rem;
+      border: 5px solid black;
+      height: 75px;
+      width: 100px;
+      background-color: white;
+    }
+
+    .next {
+      width: 65px;
+      height: 65px;
+      border-radius: 20%;
+    }
+
+    .topOfGrid .btn {
+      position: relative;
+      top: 23px;
+      left: 50px;
+    }
+
+    .grid .btn {
+      margin: 25px;
+      height: 65px;
+      width: 65px;
+      border-radius: 20%;
+    }
+
+    .difficulty .btn {
+      position: relative;
+      margin: 12px;
+      height: 100px;
+      width: 270px;
+      background-color: white;
+    }
+
+    .endOfTheGame .btn {
+      height: 200px;
+      width: 300px;
+      background-color: olive;
+    }
+
+    p {
+      position: absolute;
+      top: auto;
+      bottom: -22px;
+      left: 104px;
+      font-size: 3rem;
+    }
+
+    .orange {
+      background-color: orange;
+    }
+
+    .purple {
+      background-color: purple;
+    }
+
+    .pink {
+      background-color: pink;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+
+    .dark-cyan {
+      background-color: darkCyan;
+    }
+
+    .blue {
+      background-color: blue;
+    }
+
+    .white {
+      background-color: white;
+    }
+
+    .gray {
+      background-color: grey;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .olive {
+      background-color: olive;
+    }
+
+    .brown {
+      background-color: brown;
+    }
+
+    .turquoise {
+      background-color: turquoise;
+    }
+
+    .rebecca-purple {
+      background-color: rebeccaPurple;
+    }
+
+    .orange-red {
+      background-color: orangeRed;
+    }
+
+    .thistle {
+      background-color: thistle;
+    }
+
+    .lime {
+      background-color: lime;
+    }
+
+    .magenta {
+      background-color: magenta;
+    }
+
+    .peru {
+      background-color: peru;
+    }
+
+    .sky-blue {
+      background-color: skyBlue;
+    }
+
+    .slate-blue {
+      background-color: slateBlue;
+    }
+
+    .saddle-brown {
+      background-color: saddleBrown;
+    }
+
+    .navy {
+      background-color: navy;
+    }
+
+    .salmon {
+      background-color: salmon;
+    }
+
+    .silver {
+      background-color: silver;
+    }
+
+    .sienna {
+      background-color: sienna;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 id="level-title">Select The Difficulty Level</h1>
+
+  <div id="difficulty" class="container difficulty">
+    <div class="row">
+
+      <div type="button" id="threeToThree" class="btn threeToThree">
+        <p>3x3</p>
+      </div>
+
+      <div type="button" id="fourToFour" class="btn fourToFour">
+        <p>4x4</p>
+      </div>
+
+      <div type="button" id="fiveToFive" class="btn fiveToFive">
+        <p>5x5</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="topOfGrid" class="container topOfGrid">
+    <div class="row">
+      <h1>Time:</h1>
+      <div type="button" id="timer" class="btn timer">
+
+      </div>
+    </div>
+
+    <div class="row">
+      <h1>Next:</h1>
+      <div type="button" id="next" class="btn next">
+
+      </div>
+    </div>
+
+  </div>
+
+  <div id="grid" class="container grid">
+
+    <div class="row">
+
+      <div type="button" id="orange" class="btn orange">
+      </div>
+
+      <div type="button" id="purple" class="btn purple">
+      </div>
+
+      <div type="button" id="pink" class="btn pink">
+      </div>
+
+      <div type="button" id="yellow" class="btn yellow">
+      </div>
+
+      <div type="button" id="dark-cyan" class="btn dark-cyan">
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div type="button" id="blue" class="btn blue">
+      </div>
+
+      <div type="button" id="white" class="btn white">
+      </div>
+
+      <div type="button" id="green" class="btn green">
+      </div>
+
+      <div type="button" id="red" class="btn red">
+      </div>
+
+      <div type="button" id="olive" class="btn olive">
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div type="button" id="brown" class="btn brown">
+      </div>
+
+      <div type="button" id="turquoise" class="btn turquoise">
+      </div>
+
+      <div type="button" id="rebecca-purple" class="btn rebecca-purple">
+      </div>
+
+      <div type="button" id="orange-red" class="btn orange-red">
+      </div>
+
+      <div type="button" id="thistle" class="btn thistle">
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div type="button" id="lime" class="btn lime">
+      </div>
+
+      <div type="button" id="magenta" class="btn magenta">
+      </div>
+
+      <div type="button" id="peru" class="btn peru">
+      </div>
+
+      <div type="button" id="sky-blue" class="btn sky-blue">
+      </div>
+
+      <div type="button" id="slate-blue" class="btn slate-blue">
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div type="button" id="saddle-brown" class="btn saddle-brown">
+      </div>
+
+      <div type="button" id="navy" class="btn navy">
+      </div>
+
+      <div type="button" id="salmon" class="btn salmon">
+      </div>
+
+      <div type="button" id="silver" class="btn silver">
+      </div>
+
+      <div type="button" id="sienna" class="btn sienna">
+      </div>
+    </div>
+  </div>
+
+  <div id="endOfTheGame" class="container endOfTheGame">
+
+    <h1>Game Over</h1>
+
+    <div type="button" id="point" class="btn">
+      <h2></h2>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="yourscript.js" charset="utf-8"></script>
+</body>
+
+</html>
