@@ -24,8 +24,7 @@ let strategies = new Map([
 // Thanks to this strategy, I didn't use any if/else or switch-case statement. Instead I used map.
 function action(selection) {
   let strategy = strategies.get(selection);
-  var nextColor = strategy();
-  return nextColor;
+  strategy();
 }
 
 $("#difficulty .btn").click(function() {
