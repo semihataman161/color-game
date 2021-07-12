@@ -21,12 +21,14 @@ let strategies = new Map([
   ["fiveToFive", arrangeFiveToFiveColors]
 ]);
 
-// Thanks to this strategy, I didn't use any if/else or switch-case statement. Instead I used map.
+// Thanks to this strategy, I didn't use any if/else or switch-case statement instead I used map.
+// This technique increased readability.
 function action(selection) {
   let strategy = strategies.get(selection);
   strategy();
 }
 
+// I've collected all n buttons operations into one function(DRY). This technique increased maintainability.
 $("#difficulty .btn").click(function() {
   $("#level-title").hide();
   $("#difficulty").hide();
@@ -34,7 +36,8 @@ $("#difficulty .btn").click(function() {
 
   playSound("Start");
   executeTimer();
-
+  
+  // We are calling appropriate function on the fly, this approach increased flexibility.
   var selection = $(this).attr("id");
   var nextColor = nextSequence(selection);
 
