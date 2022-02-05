@@ -106,10 +106,7 @@ function arrangeThreeToThreeColors() {
       var randomColor = getValidColor();
       manipulateButtons(i, randomColor);
       seenColors.push(randomColor);
-
-    } else {
-      continue;
-    }
+    } 
   }
 }
 
@@ -120,10 +117,7 @@ function arrangeFourToFourColors() {
       var randomColor = getValidColor();
       manipulateButtons(i, randomColor);
       seenColors.push(randomColor);
-
-    } else {
-      continue;
-    }
+    } 
   }
 }
 
