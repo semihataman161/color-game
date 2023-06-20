@@ -6,4 +6,4 @@ First, the difficulty level is requested from the user. Levels (3x3, 4x4, 5x5) a
 Used Languages and Frameworks: HTML, CSS, JavaScript, jQuery
 
 # You can access the live website at:
-[color-game-beta.vercel.app/](https://color-game-beta.vercel.app/)https://color-game-beta.vercel.app/
+https://color-game-beta.vercel.app
